@@ -42,7 +42,7 @@ public class GameController
         while (!isValid)
         {
             _view.DisplayCurrentPlayerName();
-                
+
             _view.DisplayBoard();
 
             _view.AskForInput();
@@ -52,13 +52,25 @@ public class GameController
 
             if (!isValid)
             {
-                View.ShowInvalidMessage();
+                View.CellAlreadyOccupied();
             }
         }
     }
 
     private static int ReadMove()
     {
-        return int.Parse(Console.ReadLine() ?? string.Empty);
+        int move;
+
+        while (!IsValidMove(Console.ReadLine(), out move))
+        {
+            View.InvalidMove();
+        }
+
+        return move;
+    }
+
+    private static bool IsValidMove(string? input, out int move)
+    {
+        return int.TryParse(input, out move) && move is > 0 and < 10;
     }
 }

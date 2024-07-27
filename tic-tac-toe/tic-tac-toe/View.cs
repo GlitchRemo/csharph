@@ -41,7 +41,12 @@ public class View
         Console.WriteLine("Game is draw!!");
     }
 
-    public static void ShowInvalidMessage()
+    public static void InvalidMove()
+    {
+        Console.WriteLine("Invalid move! Enter a number between 1 to 9. Try again!!");
+    }
+
+    public static void CellAlreadyOccupied()
     {
         Console.WriteLine("Invalid move! The cell is already occupied. Try again!!");
     }
