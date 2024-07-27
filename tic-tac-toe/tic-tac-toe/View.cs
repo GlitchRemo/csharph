@@ -11,65 +11,86 @@ public class View
 
     public static void AskForInput()
     {
-        Console.WriteLine("Enter a number between 1 and 9, mapped to the board cells! ");
+        PrintCentered("Enter a number between 1 and 9, mapped to the board cells!: ", false);
     }
 
     public void DisplayBoard()
     {
         var board = _game.GetBoard();
         var rows = Enumerable.Range(0, 3)
-            .Select(i => string.Join(" | ", board.Skip(i * 3).Take(3).Select(c => c == '\0' ? ' ' : c)));
+            .Select(i => string.Join(" | ", board.Skip(i * 3).Take(3).Select(c => c == '\0' ? ' ' : c))).ToArray();
 
-        Console.WriteLine();
-        Console.WriteLine(string.Join("\n---------\n", rows));
-        Console.WriteLine();
+        PrintCentered("");
+
+        PrintCentered( rows[0]);
+        PrintCentered("---------");
+        PrintCentered( rows[1]);
+        PrintCentered("---------");
+        PrintCentered( rows[2]);
+        
+        PrintCentered("");
     }
 
     public void DisplayCurrentPlayerName()
     {
         var currentPlayer = _game.CurrentPlayer();
-        Console.WriteLine(currentPlayer.Name + "'s Turn (" + currentPlayer.Sign + "):");
+        PrintCentered(currentPlayer.Name + "'s Turn (" + currentPlayer.Sign + "):");
     }
 
     public void DeclareWinner()
     {
         DisplayBoard();
-        Console.WriteLine(_game.CurrentPlayer().Name + " is the winner!!");
+        PrintCentered(_game.CurrentPlayer().Name + " is the winner!!");
     }
 
     public void DeclareDraw()
     {
         DisplayBoard();
-        Console.WriteLine("Game is draw!!");
+        PrintCentered("Game is draw!!");
     }
 
     public static void InvalidMove()
     {
-        Console.WriteLine("Invalid move! Enter a number between 1 to 9. Try again!!");
+        PrintCentered("Invalid move! Enter a number between 1 to 9. Try again!!: ", false);
     }
 
     public static void CellAlreadyOccupied()
     {
-        Console.WriteLine("Invalid move! The cell is already occupied. Try again!!");
+        PrintCentered("Invalid move! The cell is already occupied. Try again!!");
     }
 
     public static void ShowWelcomeMessage()
     {
-        Console.WriteLine("Welcome to Tic-Tac-Toe!!");
-        Console.WriteLine("Let's get started!!");
-        Console.WriteLine();
+        PrintCentered("Welcome to Tic-Tac-Toe!!");
+        PrintCentered("Let's get started!!");
+        PrintCentered("");
     }
 
     public static string? GetPlayerName(int playerNumber)
     {
-        Console.Write($"Player {playerNumber}, enter your name: ");
+        PrintCentered($"Player {playerNumber}, enter your name: ", false);
         return Console.ReadLine();
     }
 
     public static void ShowGameLoading()
     {
-        Console.WriteLine("Game is Loading...");
+        PrintCentered("Game is Loading...", false);
         Thread.Sleep(2000);
         Console.Clear();
+    }
+    
+    private static void PrintCentered(string text, bool newLine = true)
+    {
+        // Get the width of the console window
+        var consoleWidth = Console.WindowWidth;
+
+        // Calculate the amount of padding needed
+        var padding = (consoleWidth - text.Length) / 2;
+
+        // Print the text with padding
+        var format = new string(' ', padding) + text;
+        
+        if (newLine) Console.WriteLine(format);
+        else Console.Write(format);
     }
 }
