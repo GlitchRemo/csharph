@@ -1,0 +1,15 @@
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.deps.json
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.runtimeconfig.json
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.dll
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/bin/Debug/net6.0/ref/tic-tac-toe.dll
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/bin/Debug/net6.0/tic-tac-toe.pdb
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.csproj.AssemblyReference.cache
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.GeneratedMSBuildEditorConfig.editorconfig
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.AssemblyInfoInputs.cache
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.AssemblyInfo.cs
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.csproj.CoreCompileInputs.cache
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.dll
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/ref/tic-tac-toe.dll
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.pdb
+/Users/riyaghosal/workspace/csharp/tic-tac-toe/tic-tac-toe/obj/Debug/net6.0/tic-tac-toe.genruntimeconfig.cache
