@@ -2,8 +2,12 @@
 
 using tic_tac_toe;
 
-var player1 = new Player("Riya", 'X');
-var player2 = new Player("Swagato", 'O');
+View.ShowWelcomeMessage();
+
+var player1 = new Player(View.GetPlayerName(1), 'X');
+var player2 = new Player(View.GetPlayerName(2), 'O');
+
+View.ShowGameLoading();
 
 var game = new Game(player1, player2);
 var view = new View(game);

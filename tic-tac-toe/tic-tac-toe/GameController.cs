@@ -30,27 +30,26 @@ public class GameController
                 return;
             }
 
-
             _game.SwitchPlayer();
         }
     }
 
     private void PlayARound()
     {
-        var isValid = false;
+        var isRegistered = false;
 
-        while (!isValid)
+        while (!isRegistered)
         {
             _view.DisplayCurrentPlayerName();
 
             _view.DisplayBoard();
 
-            _view.AskForInput();
+            View.AskForInput();
             var move = ReadMove();
 
-            isValid = _game.RegisterMove(move);
+            isRegistered = _game.RegisterMove(move);
 
-            if (!isValid)
+            if (!isRegistered)
             {
                 View.CellAlreadyOccupied();
             }

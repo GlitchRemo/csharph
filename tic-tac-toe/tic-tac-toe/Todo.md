@@ -1,4 +1,4 @@
 - [x] Add winning and draw condition
 - [x] Disallow a move in an already occupied cell
-- [ ] Add functionality to enter names of players
+- [x] Add functionality to enter names of players
 - [x] Allow users to enter again in case of wrong input
