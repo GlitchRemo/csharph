@@ -85,13 +85,8 @@ public class View
     
     private static void PrintCentered(string text, bool newLine = true)
     {
-        // Get the width of the console window
-        var consoleWidth = Console.WindowWidth;
+        var padding = (Console.WindowWidth - text.Length) / 2;
 
-        // Calculate the amount of padding needed
-        var padding = (consoleWidth - text.Length) / 2;
-
-        // Print the text with padding
         var format = new string(' ', padding) + text;
         
         if (newLine) Console.WriteLine(format);
