@@ -2,6 +2,7 @@
 
 using tic_tac_toe;
 
+View.ClearScreen();
 View.ShowWelcomeMessage();
 
 var player1 = new Player(View.GetPlayerName(1), 'X');
