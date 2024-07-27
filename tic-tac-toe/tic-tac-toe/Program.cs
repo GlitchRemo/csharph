@@ -8,6 +8,7 @@ var player1 = new Player(View.GetPlayerName(1), 'X');
 var player2 = new Player(View.GetPlayerName(2), 'O');
 
 View.ShowGameLoading();
+View.ClearScreen();
 
 var game = new Game(player1, player2);
 var view = new View(game);

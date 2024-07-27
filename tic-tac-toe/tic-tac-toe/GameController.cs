@@ -17,6 +17,7 @@ public class GameController
         while (true)
         {
             PlayARound();
+            View.ClearScreen();
 
             if (_game.HasDraw())
             {
@@ -36,23 +37,17 @@ public class GameController
 
     private void PlayARound()
     {
-        var isRegistered = false;
+        _view.DisplayCurrentPlayerName();
 
-        while (!isRegistered)
+        _view.DisplayBoard();
+
+        View.AskForInput();
+        var move = ReadMove();
+
+        while (!_game.RegisterMove(move))
         {
-            _view.DisplayCurrentPlayerName();
-
-            _view.DisplayBoard();
-
-            View.AskForInput();
-            var move = ReadMove();
-
-            isRegistered = _game.RegisterMove(move);
-
-            if (!isRegistered)
-            {
-                View.CellAlreadyOccupied();
-            }
+            View.CellAlreadyOccupied();
+            move = ReadMove();
         }
     }
 

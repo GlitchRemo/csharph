@@ -40,7 +40,7 @@ public class View
     public void DeclareWinner()
     {
         DisplayBoard();
-        PrintCentered(_game.CurrentPlayer().Name + " is the winner!!");
+        PrintCentered(_game.CurrentPlayer().Name + " is the winner!! 🏆🎉🥳 ");
     }
 
     public void DeclareDraw()
@@ -56,7 +56,7 @@ public class View
 
     public static void CellAlreadyOccupied()
     {
-        PrintCentered("Invalid move! The cell is already occupied. Try again!!");
+        PrintCentered("Invalid move! The cell is already occupied. Try again!!: ", false);
     }
 
     public static void ShowWelcomeMessage()
@@ -74,8 +74,12 @@ public class View
 
     public static void ShowGameLoading()
     {
-        PrintCentered("Game is Loading...", false);
+        PrintCentered("Game is Loading \u23f3 \u231b ", false);
         Thread.Sleep(2000);
+    }
+    
+    public static void ClearScreen()
+    {
         Console.Clear();
     }
     
