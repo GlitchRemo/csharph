@@ -1,3 +1,5 @@
+using System;
+
 namespace tic_tac_toe;
 
 public class GameController
@@ -18,16 +20,16 @@ public class GameController
         {
             PlayARound();
             View.ClearScreen();
+            
+            if (_game.HasWon())
+            {
+                _view.DeclareWinner();
+                return;
+            }
 
             if (_game.HasDraw())
             {
                 _view.DeclareDraw();
-                return;
-            }
-
-            if (_game.HasWon())
-            {
-                _view.DeclareWinner();
                 return;
             }
 
