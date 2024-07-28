@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/riyaghosal/workspace/tic-tac-toe/tic-tac-toe.csproj",
+      "projectUniqueName": "/Users/riyaghosal/workspace/ttt-Csharph/tic-tac-toe.csproj",
       "projectName": "tic-tac-toe",
-      "projectPath": "/Users/riyaghosal/workspace/tic-tac-toe/tic-tac-toe.csproj",
+      "projectPath": "/Users/riyaghosal/workspace/ttt-Csharph/tic-tac-toe.csproj",
       "packagesPath": "/Users/riyaghosal/.nuget/packages/",
-      "outputPath": "/Users/riyaghosal/workspace/tic-tac-toe/obj/",
+      "outputPath": "/Users/riyaghosal/workspace/ttt-Csharph/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/riyaghosal/.nuget/NuGet/NuGet.Config"
